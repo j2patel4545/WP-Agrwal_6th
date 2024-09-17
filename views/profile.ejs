@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music shop || india's growing brand</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+
+}
+body{
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  color:#ffffff;
+}
+body nav {
+  display: flex;
+  height: 10vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #2e2e2e; /* Set background color here */
+  /* border-bottom: #FFFFFF solid 2px; */
+  z-index: 1;
+  /* box-shadow: 0px 0px 10px 5px rgb(239, 236, 236); */
+  position: fixed;
+  top: 0;
+}
+#nav {
+  height: 9vh;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  z-index: 99;
+  color: #fff;
+  background-color: rgba(46, 46, 46, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Adjust the blur radius as needed */
+}
+
+#div-a {
+display: flex;
+height: 100%;
+width: 50%;
+object-fit: contain;
+justify-content: left;
+
+}
+#div-a img{
+object-fit: contain;
+height: 100%;
+width: 10VW;
+margin-left: 20px;
+
+}
+#div-b {
+display: flex;
+height: 100%;
+color: #fff;
+width: 50%;
+justify-content: flex-end;
+align-items: center;
+margin-right: 27px;
+}
+#div-b ul{
+margin: 15px;
+padding-left: 5px;
+cursor: pointer;
+}
+#div-b ul a{
+margin: 15px;
+padding-left: 5px;
+cursor: pointer;
+color: #fff;
+}
+nav  #logo{
+  display: flex;
+  height: 50%;
+  width: 10%;
+  align-items:center;
+  justify-content: center;
+
+  /* background-color: #7b7575; */
+}
+ #logo  a img{
+  object-fit: contain;
+  height: 30%;
+  pointer-events: none;
+  margin-left: 50px;
+  width: 100%;
+ }
+nav .catagorys{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  width: 40%;
+  margin-left:120px;
+  
+}
+nav .catagorys #ctg{
+  margin:10px ;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  
+}
+nav .catagorys #ctg{
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+  height: 100%;
+  font-size: 12px;
+  color: #262626;
+  white-space: nowrap;
+
+}
+
+nav #search{
+  display: flex;
+  height: 100%;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+#search input{
+  height: 40px;
+  background-color: #F5F5F6;
+  width: 22vw;
+  /* margin-right: -8vw; */
+  border: none;
+  font-size: 16px;
+  
+  border-radius: 40px;
+}form.nosubmit {
+  border: none;
+  padding: 0;
+ }
+ 
+ 
+ input.nosubmit {
+   border: 1px solid #000000;
+   cursor: pointer;
+   width: 80%;
+   padding: 9px 15px 9px 50px;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 14px center;
+ }
+nav #profile{
+  display: flex;
+  height: 100%;
+  /* background-color: #a56a6a; */
+  width: 20%;
+  padding-left: 12vh;
+}
+#profile .pf{
+  width: 31%;
+  height: 100%;
+}
+.icn{
+  width: 100%;
+  height: 70%;
+  align-items: center;
+  background-color: #ffffff;
+  justify-content: center;
+  padding-top: 20px;
+}
+.icn img{
+  object-fit: contain;
+  height: 100%;
+  width: 50%;
+  pointer-events: none;
+
+  margin-left: 12px;
+  cursor: pointer;
+}
+.ttx{
+  width: 100%;
+  height: 30%;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+}
+#profile .wish{
+  width: 31%;
+  height: 100%;
+
+}
+#profile .bag{
+  width: 31%;
+  height: 100%;
+
+}
+.igrs{
+  object-fit: contain;
+  height: 100%;
+  width: 96%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+section {
+  position: relative;
+  width: calc(min(47rem, 90%));
+  margin: 0 auto;
+  min-height: 100vh;
+  column-gap: 3rem;
+  padding-block: min(20vh, 3rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+  h2 {
+    letter-spacing: 0.8px;
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 1.2;
+    margin-top:5vh;
+  }
+
+  
+
+.swiper-container {
+  position: relative;
+  /* padding-top: vh; */
+}
+
+.swiper {
+  width: 100%;
+  padding: 60px 0 95px 0;
+}
+
+.swiper-slide {
+  width: 10rem;
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: -1px 5px 15px #0000001f;
+
+  
+
+  
+
+  .slide-content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    width: 90%;
+  }
+
+  .author {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    position: absolute;
+    bottom: -90px;
+    width: 100%;
+    display: none;
+    opacity: 0;
+    
+
+    span {
+      color: #ffffff;
+      display: block;
+      margin: 5px 0 10px 0;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3.5px solid white;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        svg {
+          width: 20px;
+          color: orange;
+        }
+      }
+    }
+  }
+}
+
+.swiper-slide-active .author {
+  display: grid;
+  opacity: 1;
+}
+
+.swiper-slide--two {
+  background: #0575e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #021b79,
+    #0575e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #021b79,
+    #0575e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+  }
+}
+
+.swiper-slide--one {
+  background: #23074d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #cc5333,
+    #23074d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #cc5333,
+    #23074d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  h3 {
+    font-family: "Quicksand", sans-serif;
+  }
+}
+
+.swiper-slide--three {
+  background: #159957;
+
+  h3 {
+    font-family: "Satisfy", cursive;
+    font-weight: 300;
+  }
+}
+
+.swiper-slide--four {
+  background: #b06ab3;
+
+  h3 {
+    font-family: "Courgette", cursive;
+    font-weight: 300;
+  }
+}
+
+.swiper-slide--five {
+  background: #093028; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #237a57,
+    #093028
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #237a57,
+    #093028
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  h3 {
+    font-family: "Noto Serif Vithkuqi", serif;
+    font-weight: 300;
+  }
+}
+
+.swiper-slide--six {
+  background: #b9f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #b9f,
+    #3b2421
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #b9f, #3b2421);
+
+  h3 {
+    font-family: "Chonburi", cursive;
+    font-weight: 400;
+  }
+}
+
+.swiper-button-prev {
+  background: white;
+  border-radius: 50%;
+  top: 47%;
+  left: -30px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 2px 11px rgb(0 0 0 / 17%);
+
+  &::after {
+    font-size: 1.4rem;
+    content: "";
+  }
+
+  svg {
+    width: 25px;
+  }
+}
+
+.swiper-button-next {
+  background: white;
+  border-radius: 50%;
+  top: 47%;
+  right: -30px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 2px 11px rgb(0 0 0 / 17%);
+
+  &::after {
+    font-size: 1.4rem;
+    content: "";
+  }
+
+  svg {
+    width: 25px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+
+  @media (min-width: 760px) {
+    display: flex;
+  }
+}
+ 
+.igrs1{
+  object-fit: contain;
+  height: 80%;
+  width: 86%;
+}
+.igrs3{
+  object-fit: contain;
+  height: 84%;
+  width: 85%;
+}
+.igrs4{
+  object-fit: contain;
+  height: 74%;
+  width: 76%;
+}
+.igrs5{
+  object-fit: cover;
+  height: 55vh;
+  width: 100%;
+  margin-bottom: -10px;
+  /* backgr6und-color: #000000; */
+}
+
+.igrs6{
+  object-fit: contain;
+  height: 80%;
+  width: 79%;
+}
+
+#labelname{
+  display: flex;
+  height: 7vh;
+
+
+  align-items: flex-end;
+  margin-left: 4vw;
+  margin-bottom: 8px;
+}
+#languages{
+  display: flex;
+  height: 20vh;
+  width: 95%;
+  margin-left: 2.5%;
+  justify-content: space-evenly;
+  align-items: center;
+  border: #78bcff solid 2px;
+  border-radius: 15px;
+}
+.i{
+  color: #0575e6;
+  font-size: 14px;
+}
+.lgig{
+  object-fit: contain;
+  height: 75%;
+  width: 100%;
+  border-radius: 0;
+}
+/* ----------footer-------------- */
+#footer{
+  display: flex;
+  height: 10vh;
+  width: 100%;
+   margin-top: 10vh;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: #bcbcbc;
+   font-size: 14px;
+}
+#footer  a{
+  color: #fff;
+  margin-left: 5px;
+  cursor: pointer;
+
+}
+  </style>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+</head>
+<body>
+  <nav id="nav">
+    <div id="div-a">
+      <a href="/"><img src="https://www.ssagrawal.org/202122/wordpress/wp-content/uploads/2021/01/logo.png" alt=""></a>
+  </div>
+  <div id="div-b">
+      <ul><a href="/logout">Log out</a></ul>
+      <ul><a href="/reg">Register</a></ul>
+      <ul>About</ul>
+      <ul>Contect us</ul>
+</nav>
+
+    <section>
+      <h2>Meet Our Team</h2>
+
+        <div class="swiper-container">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide--one">
+                <div class="slide-content">
+                  <img class="igrs1" src="/videos/princy-removebg-preview.png" alt="">
+      
+                </div>
+                <div class="author">
+                  <img src="/videos/social2 linkedin.png" alt="William Shakespeare">
+                  <span>Patel Princy  <div class="i">team leader</div></span>
+                  <ul>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide--two">
+                <div class="slide-content">
+                  <img class="igrs" src="/videos/j2_-_Copy-removebg-preview.png" alt="">
+      
+                </div>
+                <div class="author">
+                  <img src="/videos/social2 linkedin.png" alt="William Shakespeare">
+                  <span>Patel Jetal  <div class="i">team member</div></span>
+                  <ul>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide--three">
+                <div class="slide-content">
+                  <img class="igrs3" src="/videos/frmm-removebg-preview.png" alt="">
+      
+                </div>
+                <div class="author">
+                  <img src="/videos/social2 linkedin.png" alt="William Shakespeare">
+                  <span>Patel Foram <div class="i">team member</div></span>
+                  <ul>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide--four">
+                <div class="slide-content">
+                  <img class="igrs4" src="/videos/dhruti1-removebg-preview.png" alt="">
+      
+                </div>
+                <div class="author">
+                  <img src="/videos/social2 linkedin.png" alt="William Shakespeare">
+                  <span>Patel Dhruti <div class="i">team member</div></span>
+                  <ul>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide--five">
+                <div class="slide-content">
+                  <img class="igrs5" src="/videos/prince-removebg-preview (1).png" alt="">
+      
+                </div>
+                <div class="author">
+                  <img src="/videos/social2 linkedin.png" alt="William Shakespeare">
+                  <span>Parmar Prince <div class="i">team member</div></span>
+                  <ul>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide--six">
+                <div class="slide-content">
+                  <img class="igrs6" src="/videos/deep-removebg-preview.png" alt="">
+      
+                </div>
+                <div class="author">
+                  <img src="/videos/social2 linkedin.png" alt="William Shakespeare">
+                  <span>Prajapati Deep <div class="i">team member</div></span>
+                  <ul>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                      </svg>
+      
+                    </li>
+                  </ul>
+                </div>
+              </div>
+      
+            </div>
+      
+          </div>
+      
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+            </svg>
+      
+          </div>
+          <div class="swiper-button-next">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+            </svg>
+      
+          </div>
+        </div>
+      
+      </section>
+      <div id="labelname">Language's we Used</div>
+      <div id="languages">
+        <img class="lgig" src="/videos/node.png" alt="">
+        <img class="lgig" src="/videos/html5-logo-devextreme-multi-purpose-controls-html-javascript-3.png" alt="">
+        <img class="lgig" src="/videos/express.png" alt="">
+
+
+      </div>
+      <div id="labelname">Tool's we Used</div>
+
+      <div id="languages">
+        <img class="lgig" src="/videos/Figma.webp" alt="">
+        <img class="lgig" src="/videos/vscode.png" alt="">
+        <img class="lgig" src="/videos/Canvaa.jpg" alt="">
+        <img class="lgig" src="/videos/Adobe.png" alt="">
+        <img class="lgig" src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*doAg1_fMQKWFoub-6gwUiQ.png" alt="">
+
+
+
+
+      </div>
+      <div id="labelname"></div>
+
+    
+      <!-- --------footer----------- -->
+      <div id="footer">
+        All design Rights Reserved by <a href="https://work-portfolio-drab.vercel.app/">© Jetal patel</a>
+    </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    /*
+inspiration
+https://cz.pinterest.com/pin/830703093790696716/
+*/
+
+var swiper = new Swiper(".swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 4,
+      slideShadows: true
+    },
+    loop: true,
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    keyboard: {
+      enabled: true
+    },
+    mousewheel: {
+      thresholdDelta: 70
+    },
+    breakpoints: {
+      560: {
+        slidesPerView: 2.5
+      },
+      768: {
+        slidesPerView: 3
+      },
+      1024: {
+        slidesPerView: 3
+      }
+    }
+  });
+  </script>
+</body>
+</html>

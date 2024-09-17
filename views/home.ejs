@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.S.Agrwal Collage</title>
+    <style>
+        *{
+    margin:0;
+    padding:0; 
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+    text-decoration: none;
+}
+*::selection{
+    color: #fff;
+    background-color: #000;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    #nav {
+        height: 9vh;
+        width: 100%;
+        position: fixed;
+        display: flex;
+        z-index: 99;
+        color: #fff;
+        background-color: rgba(46, 46, 46, 0.5); /* Semi-transparent background */
+        backdrop-filter: blur(5px); /* Adjust the blur radius as needed */
+    }
+    
+#div-a {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    object-fit: contain;
+    justify-content: left;
+  
+}
+#div-a img{
+    object-fit: contain;
+    height: 100%;
+    width: 10VW;
+    margin-left: 20px;
+  
+}
+#div-b {
+    display: flex;
+    height: 100%;
+    color: #fff;
+    width: 50%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 27px;
+}
+#div-b ul{
+    margin: 15px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+#div-b ul a{
+    margin: 15px;
+    padding-left: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#cursor{
+    height: 100px;
+    width: 100px;
+    background-color: blanchedalmond;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+     transform:scale(0);
+
+}
+#page1{
+    min-height: 120vh;
+    position: relative;
+    /* background-color: aqua; */
+    width: 100%;  
+    padding: 1vw;
+    padding-top: 19vh; 
+}
+#page1 h1{
+    font-size: 15.2vw;
+    text-transform: uppercase;
+    background: #27E6D3;
+    background: linear-gradient(to right, #27E6D3 0%, #880ECF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: fantasy;
+    line-height: 14vw;
+    outline: #c163a6 2px;
+}
+#video-containter{
+    height: 100vh;
+    width:100%;
+    padding-top: 20vh;
+    /* background-color: gray; */
+    margin-top: 1vw;
+}
+#video-containter video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#video-containter #play{
+    padding: 3vw 2vw;
+    background-color: black;
+    color: #fff;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    font-family: fantasy;
+    position: fixed;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+#eng{
+    display: flex;
+    height: 12vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #8d8c8c;
+    font-size: 30px;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    display: flex;
+    padding: 3vw 1vw;
+    justify-content: space-between;
+}
+#page2 .elem{
+    height: 100%;
+    width: 31%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+}
+#page2 .elem .boxin{
+    display: flex;
+    position: absolute;
+    height: 60px;
+    width: 80%;
+    border-radius: 50px;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:rgb(241, 185, 195);
+}
+#page2 .elem .boxin:hover{
+    height: 200px;
+    transition: 0.8s all ease-in-out;
+    
+
+}
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale:1.1;
+}
+#page2 .elem #boxin{
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(223,87,250,1) 100%);
+}
+#feculty{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+}
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    /* background-color: rgb(212, 225, 236); */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap:wrap ;
+
+}
+.child{
+    height: 55vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.child h4{
+    color: rgb(126, 127, 128);
+}
+.child img{
+    height: 80%;
+    width: 90%;
+    cursor: pointer;
+    border-radius: 25px;
+
+}
+#footer{
+    display: flex;
+    height: 10vh;
+    width: 100%;
+     margin-top: 10vh;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     color: #bcbcbc;
+     font-size: 14px;
+}
+#footer  a{
+    color: #fff;
+    margin-left: 5px;
+    cursor: pointer;
+
+}
+
+}
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+</head>
+<body>
+    <div id="nav">
+        <div id="div-a">
+           <a href="/"> <img src="https://www.ssagrawal.org/202122/wordpress/wp-content/uploads/2021/01/logo.png" alt="">
+           </a> </div>
+        <div id="div-b">
+            <ul><a href="/login">Login</a></ul>
+            <ul><a href="/reg">Register</a></ul>
+            <ul>About</ul>
+            <ul>Contect us</ul>
+        </div>
+
+    </div>
+    <div id="cursor"></div>
+    <div id="main">
+        <div id="page1">
+            <h1>S.S. Agrwal</h1><br>
+            <h1> Eng . .  collage</h1>
+            <div id="video-containter">
+                <div id="play">Play</div>
+                <video autoplay loop muted src="/videos/clip1.mp4" type="video/mp4"></video>
+            </div>
+        </div>
+        <div id="eng">
+            Engineering cultivates skills, shaping minds to innovate, design, and solve complex <br> real-world <br> challenges effectively
+        </div>
+        <div id="page2">
+            <div id="elem1" class="elem">
+                <img data-scroll data-scroll-speed="2" src="/videos/mech.jpg" alt="">
+                <div id="boxin"  class="boxin">MECHENICAL</div>
+            </div>
+            <div id="elem2" class="elem">
+                <img data-scroll data-scroll-speed="1" src="/videos/compt.jpg" alt="">
+                <div id="boxin"  class="boxin">COMPUTER</div>
+
+            </div>
+            <div id="elem3" class="elem">
+                <img data-scroll data-scroll-speed="2" src="/videos/chem.jpg" alt="">
+                <div id="boxin" class="boxin">CHEMICAL</div>
+
+            </div>
+           
+        </div>
+        <div id="feculty">Meet Our Feculty's ↓</div>
+        <div id="page3">
+            <div class="child" id="child1">
+                <img src="/videos/brijesh sir.jpg" alt="">
+                <h2>Mr. Brijesh Bhandari</h2>
+                <h4>I/C HOD & Assistant Professor</h4>
+            </div>
+            <div class="child" id="child2">
+                <img src="/videos/roshni maam.jpg" alt="">
+                <h2>Mrs. Roshni Bhandari</h2>
+                <h4>Assistant Professor</h4>
+            </div>
+            <div class="child" id="child3">
+                <img src="/videos/farhin maam.png" alt="">
+                <h2>Ms. Farheenbanu Mansur </h2>
+                <h4>Assistant Professor</h4>
+            </div>
+            <div class="child" id="child4">
+                <img src="/videos/vatsal sir.jpg" alt="">
+                <h2>Mr. Vatsal Patel</h2>
+                <h4>Assistant Professor</h4>
+            </div>
+
+        </div>
+        <div id="footer">
+            All design Rights Reserved by <a href="https://work-portfolio-drab.vercel.app/">© Jetal patel</a>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
+
+function videoconAnimation() {
+    var videocon = document.querySelector("#video-containter")
+    var playbtn = document.querySelector("#play")
+    videocon.addEventListener("mouseenter",function(){
+     gsap.to(playbtn,{
+        scale : 1,
+        opacity : 1
+     })
+    })
+    
+    videocon.addEventListener("mouseleave",function(){
+        gsap.to(playbtn,{
+            scale : 0,
+            opacity : 0 
+         })
+    })
+    
+    videocon.addEventListener("mousemove",function(dets){
+        gsap.to(playbtn,{
+           left:dets.x-50,
+           top:dets.y-80 
+         })
+    })
+}
+
+videoconAnimation() 
+
+function loadingAnimation(){
+    
+gsap.from("#page1 h1",{
+    y:30,
+    opacity:0,
+    delay:0.5,
+    duration:0.9,
+    stagger:0.2
+})
+
+gsap.from("#page1 #video-containter",{
+    scale:0.9,
+    opacity:0,
+    delay:1.3,
+    duration:0.3,
+})
+}
+loadingAnimation()
+
+document.addEventListener("mousemove", function(dets){
+    gsap.to("#cursor",{
+        left:dets.x,
+        top:dets.y
+    })
+
+})
+    </script>
+</body>
+</html>
